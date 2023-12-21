@@ -7,7 +7,24 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 import com.niketest.interfaces.*;
+
+/**
+ * Implementation of the WindowFinderStrategy that uses the sliding window technique.
+ * This strategy finds the smallest substring in the given input string that contains all
+ * the characters of the specified pattern.
+ */
 public class SlidingWindowFinderStrategy implements WindowFinderStrategy {
+
+    /**
+     * Finds the smallest window substring in 'input' that contains all characters of 'pattern'.
+     * It uses the sliding window technique, which involves expanding and contracting a window
+     * in the input string and checking if it contains all characters of the pattern.
+     *
+     * @param input The string in which to find the smallest window.
+     * @param pattern The string containing the characters to be included in the window.
+     * @return The smallest substring of 'input' that contains all characters of 'pattern'.
+     *         Returns an empty string if no such window exists or if 'pattern' is longer than 'input'.
+     */
     @Override
     public String findSmallestWindow(String input, String pattern) {
         if (pattern.length() > input.length()) {

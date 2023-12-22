@@ -1,6 +1,9 @@
 package org.example;
-import java.util.*;
-import java.lang.*;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or

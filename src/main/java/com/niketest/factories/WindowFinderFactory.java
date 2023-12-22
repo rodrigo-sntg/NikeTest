@@ -1,6 +1,6 @@
 package com.niketest.factories;
 
-import com.niketest.interfaces.WindowFinderStrategy;
+import com.niketest.strategies.WindowFinderStrategy;
 import com.niketest.strategies.SlidingWindowFinderStrategy;
 
 /**

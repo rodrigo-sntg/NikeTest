@@ -1,12 +1,14 @@
 package com.niketest.strategies;
 
 
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
-import com.niketest.interfaces.*;
+
+import com.niketest.exceptions.InvalidInputException;
+import com.niketest.exceptions.PatternLongerThanInputException;
+
 
 /**
  * Implementation of the WindowFinderStrategy that uses the sliding window technique.
@@ -27,8 +29,11 @@ public class SlidingWindowFinderStrategy implements WindowFinderStrategy {
      */
     @Override
     public String findSmallestWindow(String input, String pattern) {
+        if (input == null || pattern == null) {
+            throw new InvalidInputException("Input and pattern must not be null");
+        }
         if (pattern.length() > input.length()) {
-            return "";
+            throw new PatternLongerThanInputException("Pattern is longer than input.");
         }
 
         Map<Character, Integer> charFrequencyMap = new HashMap<>();

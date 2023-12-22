@@ -1,5 +1,7 @@
 package com.niketest.cache;
 
+import com.niketest.exceptions.CacheOperationException;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,6 +25,9 @@ public class CacheSingleton {
     }
 
     public synchronized void addToCache(String key, String value) {
+        if (key == null || value == null) {
+            throw new CacheOperationException("Key and value must not be null");
+        }
         cache.put(key, value);
     }
 }

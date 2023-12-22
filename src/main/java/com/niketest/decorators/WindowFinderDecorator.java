@@ -1,6 +1,6 @@
 package com.niketest.decorators;
 
-import com.niketest.interfaces.WindowFinderStrategy;
+import com.niketest.strategies.WindowFinderStrategy;
 
 /**
  * Decorator base class for WindowFinderStrategy.

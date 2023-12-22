@@ -1,10 +1,10 @@
 package com.niketest.decorators;
 
 import com.niketest.cache.CacheSingleton;
-import com.niketest.interfaces.WindowFinderStrategy;
+import com.niketest.strategies.WindowFinderStrategy;
 
 // Decorator Concreto para Caching
-class CachingWindowFinderDecorator extends WindowFinderDecorator {
+public class CachingWindowFinderDecorator extends WindowFinderDecorator {
     public CachingWindowFinderDecorator(WindowFinderStrategy decoratedFinder) {
         super(decoratedFinder);
     }

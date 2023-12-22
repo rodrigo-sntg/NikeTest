@@ -1,7 +1,8 @@
 package com.niketest;
 
+import com.niketest.exceptions.StrategyInitializationException;
 import com.niketest.factories.WindowFinderFactory;
-import com.niketest.interfaces.WindowFinderStrategy;
+import com.niketest.strategies.WindowFinderStrategy;
 
 /**
  * Client class that uses a specified WindowFinderStrategy to find the smallest window substring.
@@ -17,6 +18,9 @@ public class SmallestWindowSearcher {
      * @param strategy The strategy to be used for finding the smallest window substring.
      */
     public SmallestWindowSearcher(WindowFinderStrategy strategy) {
+        if (strategy == null) {
+            throw new StrategyInitializationException("Strategy must not be null");
+        }
         this.strategy = strategy;
     }
 

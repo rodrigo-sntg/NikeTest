@@ -1,4 +1,4 @@
-package com.niketest.interfaces;
+package com.niketest.strategies;
 /**
  * Interface for strategies used in finding the smallest window substring.
  * This interface defines a contract for implementing various algorithms

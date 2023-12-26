@@ -59,4 +59,4 @@ To run the tests, execute `mvn test` in the project directory.
 - `CacheSingletonTest`: Tests for the caching singleton.
 
 ## Error Handling
-The project includes custom exceptions to handle specific error conditions gracefully and clearly.
+The project includes custom exceptions to handle specific error conditions clearly.
